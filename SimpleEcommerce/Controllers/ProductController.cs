@@ -40,7 +40,7 @@ namespace SimpleEcommerce.Controllers
         }
 
         [HttpPost]
-
+        //
         public async Task<ActionResult<Product>> CreateProduct(ProductDto productDto)
         {
             Product product = new Product
