@@ -14,7 +14,7 @@ namespace SimpleEcommerce.Infrastructure.Services
     {
         private readonly IMongoDatabase database;
 
-        public DbClientService(IOptions< DbConfig> dbConfig , IConfigurationService configurationService)
+        public DbClientService(IConfigurationService configurationService)
         {
             var  mongoClient = new MongoClient(configurationService.GetAppsettingValueByKey("MongoUri"));
             database = mongoClient.GetDatabase(configurationService.GetAppsettingValueByKey("DatabaseName"));

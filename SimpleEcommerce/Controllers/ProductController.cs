@@ -18,7 +18,7 @@ namespace SimpleEcommerce.Controllers
         }
 
         [HttpGet]
-       public async Task<ActionResult<IEnumerable<Product>>> getProducts()
+       public async Task<ActionResult<IEnumerable<Product>>> GetProducts()
         {
            
             return await Task.FromResult(this.productService.GetProducts());
@@ -28,7 +28,7 @@ namespace SimpleEcommerce.Controllers
 
         // api/product/id
         [HttpGet("{id}")]
-        public async Task<ActionResult<Product>> getProduct(string id)
+        public async Task<ActionResult<Product>> GetProduct(string id)
         {
             Product product = new Product
             {
